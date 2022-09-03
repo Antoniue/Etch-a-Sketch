@@ -1,4 +1,13 @@
-let color = 'blue';
+let color = 'black';
+function colorSquare(grids)
+{
+    if(color == 'random')
+    {
+        grids.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    }
+    else
+    grids.style.backgroundColor = color;
+}
 
 function gridWasPicked(gridNumber)
 {
@@ -17,7 +26,7 @@ function gridWasPicked(gridNumber)
         grids[index].addEventListener(
             'mouseover', function(){
                 if(isClick)
-                grids[index].style.backgroundColor = color;
+                colorSquare(grids[index]);
             }
         );
     }
@@ -37,7 +46,7 @@ function gridWasPicked(gridNumber)
         grids[index].addEventListener(
             'mouseover', function(){
                 if(isClick)
-                grids[index].style.backgroundColor = color;
+                colorSquare(grids[index]);
             }
         );
     }
@@ -57,7 +66,7 @@ function gridWasPicked(gridNumber)
         grids[index].addEventListener(
             'mouseover', function(){
                 if(isClick)
-                grids[index].style.backgroundColor = color;
+                colorSquare(grids[index]);
             }
         );
     }
@@ -77,7 +86,7 @@ function gridWasPicked(gridNumber)
         grids[index].addEventListener(
             'mouseover', function(){
                 if(isClick)
-                grids[index].style.backgroundColor = color;
+                colorSquare(grids[index]);
             }
         );
     }
@@ -173,7 +182,7 @@ for(let index = 0; index < 256; index++)
         'mouseover', function(){ 
             if(isClick)
             {
-            grids[index].style.backgroundColor = color;
+                colorSquare(grids[index]);
             }
         }
     );

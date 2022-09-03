@@ -11,16 +11,14 @@
 <body>
 
     <div class="playBar">
+        <div class="randomEraser">
+            <button class="randomColor" onclick="changeColor('random')">Random</button>
+            <button class="eraser" onclick="changeColor('white')">Eraser</button>
+        </div>
         <div class="header">
                 Etch a Sketch!
         </div>
         <div class="colorPicker">
-            <div class="coldWarm">
-                <button class="cold">Cold</button>
-                <button class="warm">Warm</button>
-            </div>
-            <button class="randomColor">Random</button>
-            <button class="eraser" onclick="changeColor('white')">Eraser</button>
             <div class="blackClear">
                 <button class="black" onclick="changeColor('black')">Black</button>
                 <button class="reset">Reset</button>

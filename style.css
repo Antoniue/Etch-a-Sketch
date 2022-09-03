@@ -47,7 +47,7 @@ button {
 .playBar
 {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     width: 512px;
     border-radius: 70px;
 }
@@ -72,13 +72,13 @@ button {
     font-weight: bold;
 }
 
-.coldWarm, .blackClear
+.randomEraser, .blackClear
 {
     display: flex;
     flex-direction: column;
 }
 
-.cold, .warm, .black, .reset, .randomColor, .eraser
+.black, .reset, .randomColor, .eraser
 {
     padding: 20px;
     color: black;
