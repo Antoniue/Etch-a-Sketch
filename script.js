@@ -1,17 +1,18 @@
-// let paintBoard = document.querySelector('.paintBoard');
-// for(let index = 0; index < 256; index++)
-// {
-//     paintBoard.innerHTML += "<div class='singleGrid'></div>"
-// }
-// let grids = document.querySelectorAll('.singleGrid');
-// for(let index = 0; index < 256; index++)
-// {
-//     grids[index].addEventListener(
-//         'mouseover', function(){
-//             grids[index].classList.add('isHover');
-//         }
-//     );
-// }
+let currentGrid =16;
+let paintBoard = document.querySelector('.paintBoard');
+for(let index = 0; index < 256; index++)
+{
+    paintBoard.innerHTML += "<div class='singleGrid'></div>"
+}
+let grids = document.querySelectorAll('.singleGrid');
+for(let index = 0; index < 256; index++)
+{
+    grids[index].addEventListener(
+        'mouseover', function(){
+            grids[index].classList.add('isHover');
+        }
+    );
+}
 function gridWasPicked(gridNumber)
 {
     if(gridNumber == 8)
@@ -127,13 +128,25 @@ function sizeGrid(string)
 {
     clearBoard();
     if(string == "grid8")
+    {
         gridWasPicked(8);
+        currentGrid = 8;
+    }
     if(string == "grid16")
+    {
         gridWasPicked(16);
+        currentGrid = 16;
+    }
     if(string == "grid32")
+    {
         gridWasPicked(32);
+        currentGrid = 32;
+    }
     if(string == "grid64")
+    {
         gridWasPicked(64);
+        currentGrid = 64;
+    }
 }
 
 function colorBlack()
@@ -151,9 +164,11 @@ function colorRandom()
 }
 
 const reset = document.querySelector('.reset');
-reset.addEventListener('click', function() { clearBoard();});
+reset.addEventListener('click', function() { clearBoard(); gridWasPicked(currentGrid);
+});
 
 const gridSelections = document.querySelectorAll('.gridSelections');
 gridSelections.forEach(gridSelections => {gridSelections.addEventListener('click', function() {
-    sizeGrid(gridSelections.getAttribute('id'))})
+    sizeGrid(gridSelections.getAttribute('id'));
+})
 });

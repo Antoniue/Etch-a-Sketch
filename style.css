@@ -36,8 +36,8 @@ button {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 31.25px;
-    height: 31.25px;
+    width: 32px;
+    height: 32px;
 }
 
 .isHover
