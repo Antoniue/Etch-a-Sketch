@@ -1,0 +1,110 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    background-image: url(./backgroundImg.jpg);
+}
+
+button {
+    background-color: transparent;
+    border-color: rgb(0, 114, 95);
+    border-width: 3px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 70%;
+  }
+
+.paintBoard
+{
+    display: flex;
+    height: 512px;
+    width: 512px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.singleGrid
+{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 31.25px;
+    height: 31.25px;
+}
+
+.isHover
+{
+    background-color: black;
+}
+
+.playBar
+{
+    display: flex;
+    flex-direction: column;
+    width: 512px;
+    border-radius: 70px;
+}
+
+.header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Brush Script MT', cursive;
+    font-weight: bold;
+}
+
+.colorPicker
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 17px;
+    font-family: 'Brush Script MT', cursive;
+    font-weight: bold;
+}
+
+.coldWarm, .blackClear
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.cold, .warm, .black, .reset, .randomColor
+{
+    padding: 20px;
+    color: black;
+}
+
+.belowPaint
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridText
+{
+    display: flex;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.gridInputs
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 512px;
+    padding-top: 20px;
+}
