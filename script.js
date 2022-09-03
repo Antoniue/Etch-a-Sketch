@@ -1,18 +1,4 @@
-let currentGrid =16;
-let paintBoard = document.querySelector('.paintBoard');
-for(let index = 0; index < 256; index++)
-{
-    paintBoard.innerHTML += "<div class='singleGrid'></div>"
-}
-let grids = document.querySelectorAll('.singleGrid');
-for(let index = 0; index < 256; index++)
-{
-    grids[index].addEventListener(
-        'mouseover', function(){
-            grids[index].classList.add('isHover');
-        }
-    );
-}
+
 function gridWasPicked(gridNumber)
 {
     if(gridNumber == 8)
@@ -29,6 +15,7 @@ function gridWasPicked(gridNumber)
     {
         grids[index].addEventListener(
             'mouseover', function(){
+                if(isClick)
                 grids[index].classList.add('isHover');
             }
         );
@@ -48,6 +35,7 @@ function gridWasPicked(gridNumber)
     {
         grids[index].addEventListener(
             'mouseover', function(){
+                if(isClick)
                 grids[index].classList.add('isHover');
             }
         );
@@ -67,6 +55,7 @@ function gridWasPicked(gridNumber)
     {
         grids[index].addEventListener(
             'mouseover', function(){
+                if(isClick)
                 grids[index].classList.add('isHover');
             }
         );
@@ -86,6 +75,7 @@ function gridWasPicked(gridNumber)
     {
         grids[index].addEventListener(
             'mouseover', function(){
+                if(isClick)
                 grids[index].classList.add('isHover');
             }
         );
@@ -166,6 +156,28 @@ function colorRandom()
 const reset = document.querySelector('.reset');
 reset.addEventListener('click', function() { clearBoard(); gridWasPicked(currentGrid);
 });
+
+let currentGrid =16;
+let isClick;
+let paintBoard = document.querySelector('.paintBoard');
+for(let index = 0; index < 256; index++)
+{
+    paintBoard.innerHTML += "<div class='singleGrid'></div>"
+}
+let grids = document.querySelectorAll('.singleGrid');
+for(let index = 0; index < 256; index++)
+{
+    grids[index].addEventListener(
+        'mouseover', function(){ 
+            if(isClick)
+            {
+            grids[index].classList.add('isHover');
+            }
+        }
+    );
+}
+
+document.querySelector('body').addEventListener('click', () => {isClick = !isClick;});
 
 const gridSelections = document.querySelectorAll('.gridSelections');
 gridSelections.forEach(gridSelections => {gridSelections.addEventListener('click', function() {

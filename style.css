@@ -27,6 +27,10 @@ button {
     width: 512px;
     justify-content: space-between;
     flex-wrap: wrap;
+    border-style: solid;
+    border-color: grey;
+    border-width: 10px;
+    margin-top: 20px;
 }
 
 .singleGrid
