@@ -1,3 +1,4 @@
+let color = 'blue';
 
 function gridWasPicked(gridNumber)
 {
@@ -16,7 +17,7 @@ function gridWasPicked(gridNumber)
         grids[index].addEventListener(
             'mouseover', function(){
                 if(isClick)
-                grids[index].classList.add('isHover');
+                grids[index].style.backgroundColor = color;
             }
         );
     }
@@ -36,7 +37,7 @@ function gridWasPicked(gridNumber)
         grids[index].addEventListener(
             'mouseover', function(){
                 if(isClick)
-                grids[index].classList.add('isHover');
+                grids[index].style.backgroundColor = color;
             }
         );
     }
@@ -56,7 +57,7 @@ function gridWasPicked(gridNumber)
         grids[index].addEventListener(
             'mouseover', function(){
                 if(isClick)
-                grids[index].classList.add('isHover');
+                grids[index].style.backgroundColor = color;
             }
         );
     }
@@ -76,7 +77,7 @@ function gridWasPicked(gridNumber)
         grids[index].addEventListener(
             'mouseover', function(){
                 if(isClick)
-                grids[index].classList.add('isHover');
+                grids[index].style.backgroundColor = color;
             }
         );
     }
@@ -112,6 +113,8 @@ function clearBoard()
     const singleGrid = document.querySelectorAll('.singleGrid');
     singleGrid.forEach(singleGrid => { singleGrid.remove() }
     );
+    if(color == 'white')
+    color = 'black';
 }
 
 function sizeGrid(string)
@@ -139,10 +142,9 @@ function sizeGrid(string)
     }
 }
 
-function colorBlack()
+function changeColor(newColor)
 {
-    const isHover = document.querySelectorAll('.isHover');
-    isHover.style.backgroundColor = "Black";
+    color = newColor;
 }
 
 function colorRandom()
@@ -171,14 +173,13 @@ for(let index = 0; index < 256; index++)
         'mouseover', function(){ 
             if(isClick)
             {
-            grids[index].classList.add('isHover');
+            grids[index].style.backgroundColor = color;
             }
         }
     );
 }
 
 document.querySelector('body').addEventListener('click', () => {isClick = !isClick;});
-
 const gridSelections = document.querySelectorAll('.gridSelections');
 gridSelections.forEach(gridSelections => {gridSelections.addEventListener('click', function() {
     sizeGrid(gridSelections.getAttribute('id'));

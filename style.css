@@ -44,11 +44,6 @@ button {
     height: 32px;
 }
 
-.isHover
-{
-    background-color: black;
-}
-
 .playBar
 {
     display: flex;
@@ -83,7 +78,7 @@ button {
     flex-direction: column;
 }
 
-.cold, .warm, .black, .reset, .randomColor
+.cold, .warm, .black, .reset, .randomColor, .eraser
 {
     padding: 20px;
     color: black;
