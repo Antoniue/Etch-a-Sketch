@@ -19,6 +19,21 @@ button {
     margin: 4px 2px;
     border-radius: 70%;
   }
+  
+  .pink {
+    background-color: #F5ABB9;
+    color: black;
+  }
+ 
+  .blue {
+    background-color: #56C4ED;
+    color: black;
+  }
+
+  .red {
+    background-color: red;
+    color:black;
+  }
 
 .paintBoard
 {
@@ -58,8 +73,9 @@ button {
     justify-content: center;
     align-items: center;
     font-size: 40px;
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'Impact';
     font-weight: bold;
+    color: red;
 }
 
 .colorPicker
@@ -97,6 +113,7 @@ button {
     display: flex;
     font-size: 40px;
     padding-top: 20px;
+    color: red;
 }
 
 .gridInputs

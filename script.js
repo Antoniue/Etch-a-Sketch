@@ -144,16 +144,24 @@ function sizeGrid(string)
         gridWasPicked(32);
         currentGrid = 32;
     }
-    if(string == "grid64")
-    {
-        gridWasPicked(64);
-        currentGrid = 64;
-    }
 }
 
 function changeColor(newColor)
 {
-    color = newColor;
+    switch (newColor) {
+        case "pink":
+            color = "#F5ABB9";
+            break;
+        case "blue":
+            color = "#56C4ED";
+            break;
+        case "red":
+            color = "#F20000";
+            break;
+        default:
+            color = newColor;
+            break;
+    }
 }
 
 function colorRandom()
